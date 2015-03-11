@@ -1,0 +1,63 @@
+﻿<Window x:Class="BingWallpaperBrowser.View.Browser"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Bing Wallpaper Browser"
+        Width="800"
+        Height="480">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="./ModernButton.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+
+    <Window.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="32" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0" Margin="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="64" />
+                    <ColumnDefinition Width="1" />
+                    <ColumnDefinition Width="48" />
+                    <ColumnDefinition Width="1" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="1" />
+                    <ColumnDefinition Width="128" />
+                    <ColumnDefinition Width="1" />
+                    <ColumnDefinition Width="48" />
+                    <ColumnDefinition Width="1" />
+                    <ColumnDefinition Width="72" />
+                </Grid.ColumnDefinitions>
+
+                <Button Grid.Column="0" x:Name="BPrev"
+                        Content="Previous" Click="Previous"
+                        />
+                <Button Grid.Column="2" x:Name="BNext"
+                        Content="Next" Click="Next"
+                        />
+                <TextBlock Grid.Column="4" x:Name="Title" VerticalAlignment="Center" Margin="5, 0" FontSize="16"
+                        />
+                <ComboBox Grid.Column="6" VerticalContentAlignment="Center" x:Name="CBWallpaperStyle">
+                    <ComboBoxItem>Tile</ComboBoxItem>
+                    <ComboBoxItem>Center</ComboBoxItem>
+                    <ComboBoxItem>Stretch</ComboBoxItem>
+                    <ComboBoxItem IsSelected="True">Fit</ComboBoxItem>
+                    <ComboBoxItem>Fill</ComboBoxItem>
+                </ComboBox>
+                <Button Grid.Column="8"
+                        Content="Set" Click="Set"
+                        />
+                <Button Grid.Column="10"
+                        Content="Download" Click="Download"
+                        />
+            </Grid>
+
+            <Grid Grid.Row="1" x:Name="GBg" />
+        </Grid>
+    </Window.Content>
+</Window>
