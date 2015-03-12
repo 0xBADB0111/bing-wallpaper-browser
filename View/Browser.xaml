@@ -4,14 +4,6 @@
         Title="Bing Wallpaper Browser"
         Width="800"
         Height="480">
-    <Window.Resources>
-        <ResourceDictionary>
-            <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="./ModernButton.xaml" />
-            </ResourceDictionary.MergedDictionaries>
-        </ResourceDictionary>
-    </Window.Resources>
-
     <Window.Content>
         <Grid>
             <Grid.RowDefinitions>
@@ -40,7 +32,7 @@
                 <Button Grid.Column="2" x:Name="BNext"
                         Content="Next" Click="Next"
                         />
-                <TextBlock Grid.Column="4" x:Name="Title" VerticalAlignment="Center" Margin="5, 0" FontSize="16"
+                <TextBlock Grid.Column="4" x:Name="Title" VerticalAlignment="Center" Margin="5, 0" FontSize="16" TextTrimming="CharacterEllipsis"
                         />
                 <ComboBox Grid.Column="6" VerticalContentAlignment="Center" x:Name="CBWallpaperStyle">
                     <ComboBoxItem>Tile</ComboBoxItem>
