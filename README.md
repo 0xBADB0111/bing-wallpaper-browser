@@ -4,7 +4,3 @@ Just small app for browsing, downloading and setting as wallpaper recent Bing ba
 Works on Windows 8.1, should work on any Windows newer than XP (including) with .NET Framework 4.0.
 
 Add to autostart with "/a" parameter, if you want to download&set new wallpaper from Bing every logon automatically.
-
-Latest version always at [dl.sernick.me/bing-wallpaper-browser](http://dl.sernick.me/bing-wallpaper-browser/)
-
-![Screenshot](http://dl.sernick.me/bing-wallpaper-browser/screenshot.png)
